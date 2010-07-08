@@ -1,0 +1,47 @@
+---
+section0: Kişisel günlük girdileri
+section1: Belirli bir amaca yönelik NASIL belgeleri
+section2: İlke, stil, etika belgeleri
+section7: Sınıflanamayan çeşitli belgeler
+section9: Kısa bilgi notları
+---
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="{{ site.param.fullname }}" />
+  {% if page.moved %}
+  <meta http-equiv="refresh" content="3; url=http://{{ page.moved }}">
+  {% endif %}
+  <title>{{ page.title }}</title>
+  <link href="{{ site.param.feed }}" rel="alternate" title="{{ site.param.fullname }}" type="application/atom+xml" />
+
+  <link rel="stylesheet" href="{{ site.assets }}/css/19.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="{{ site.url }}/assets/local.css"  type="text/css" media="screen, projection" />
+</head>
+<body>
+
+<div class="site">
+  <div class="title">
+    {% include navigator %}
+    {% include logo %}
+  </div>
+
+  {% unless page.moved %}
+    {{ content }}
+  {% else %}
+    Bu girdi <a href="http://{{ page.moved }}">başka bir adrese</a> 
+    taşınmıştır.  Şimdi bu sayfaya yönlendirileceksiniz.
+  {% endunless %}
+  
+  <div class="footer">
+    {% include contact %}
+    {% include feed %}
+  </div>
+</div>
+
+{% include ribbon %}
+{% include googleanalytics %}
+</body>
+</html>
