@@ -14,7 +14,7 @@ TODO
 
 2. Depoyu "fork"layın.
 
-   ![GitHub Fork](assets/github-fork.png)
+   ![GitHub Fork](http://00010011.github.com/ben/assets/github-fork.png)
 
 3. Deponun size ait bir Git deposu olması için
 
