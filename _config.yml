@@ -1,0 +1,101 @@
+# kalıcı adresler (lütfen bu ayara dokunmayın)
+permalink: /:categories:title
+
+# sözdizimi renklendirmesi
+pygments: true
+
+# --------------------------------------------------------------
+# temel parametreler
+# 
+# bu parameterleri doğrudan "site" uzayına yerleştiriyoruz
+# --------------------------------------------------------------
+#
+# bu sitenin adresi ne?  ör. "http://foo.github.com/bar".  yerelde test
+# için komut satırında bu parametreyi "http://localhost:4000" verin:
+#
+# 	jekyll --url http://localhost:4000 --rdiscount --server --auto
+url: http://00010011.github.com/ben
+# sitede kullanılan css, görsel, javascript gibi kaynaklar
+# için kullanılacak "dijital varlıklar" adresi.
+# dikkat!  bu adresi mutlak formda tanımlayın.  örnekler:
+#
+# 	/assets
+# 	http://roktas.github.com/assets
+assets: http://00010011.github.com/assets
+
+# --------------------------------------------------------------
+# site parametreleri
+# 
+# kalan tüm parameterleri "site.param" uzayına koyuyoruz
+# --------------------------------------------------------------
+param:
+        # --------------------------------------------------------------
+        # GitHub parametreleri
+        # --------------------------------------------------------------
+        # github hesap adı (ör. roktas)
+        account: "00010011"
+        # github organizasyonu (ör. 19)
+        organization: 19
+        # bu siteyi üreten github deposu (ör. roktas.github.com)
+        repository: ben
+        # proje açıklaması (ör. Python Kodları)
+        description: 19 Jekyll Şablonu
+
+        # --------------------------------------------------------------
+        # kişisel parametreler
+        # --------------------------------------------------------------
+        # kısa kullanıcı adı (ör. roktas)
+        # dikkat!  sisteminizdeki ad github hesabından farklı olabilir
+        name: «name»
+        # tam kullanıcı adı (ör. Recai Oktaş)
+        fullname: «fullname»
+        # email adresi (ör. roktas@bil.omu.edu.tr)
+        email: «email»
+        # sitede kullanılacak tepe web adresi (ör. http://roktas.me)
+        # dikkat!  bu değişkeni "url" ile karıştırmayın!
+        web: http://00010011.github.com
+        # ünvan (ör. Bilgisayar Mühendisliği Öğrencisi)
+        title: <a href="http://ondokuz.biz/">19</a> üyesi
+        # GnuPG kısa parmak izi (ör. DEADBEEF)
+        gpg: «gpg»
+        # twitter adresi (ör. http://19.statusnet/roktas)
+        twitter: «twitter»
+        # flick adresi (ör. http://flickr.com/photos/roktas)
+        flickr: «flickr»
+        # facebook adresi (ör. http://facebook.com/roktas)
+        facebook: «facebook»
+        # özet akışı adresi (ör. http://feeds.feedburner.com/roktas)
+        feed: «feed»
+
+        # --------------------------------------------------------------
+        # ekstra özellik parametreleri
+        #
+        # bu değişkenler tanımlanmazsa (~ kullanın) öntanımlı sitede
+        # ilgili özellik bulunmayacaktır (örneğin: disqus)
+        #
+        # dikkat!  değişkenin tanımlı olmaması için ~ değeri verin
+        # --------------------------------------------------------------
+        # logo (ör. http://00010011.github.com/assets/19/19-normal-128x128.png)
+        logo: http://00010011.github.com/assets/19/19-normal-128x128.png
+        # google analytics takip numarası (ör. UA-1234567-8
+        googleanalyticsid: ~
+        # sayfa yorumları için disqus site kaydı (ör. roktas)
+        disqus: ~
+        # GitHub şerit metni (ör. GitHub'dayım)
+        ribbon: GitHub'dayım
+
+        # --------------------------------------------------------------
+        # bölüm seçme parametreleri
+        #
+        # dikkat!  çok fazla bölüm atlamayı tavsiye etmiyoruz
+        # --------------------------------------------------------------
+        # 0'ncı bölümü atla
+        # nouse0: 1
+        # 1'nci bölümü atla
+        # nouse1: 1
+        # 2'nci bölümü atla
+        # nouse2: 1
+        # 7'nci bölümü atla
+        # nouse7: 1
+        # 9'ncu bölümü atla
+        # nouse9: 1
