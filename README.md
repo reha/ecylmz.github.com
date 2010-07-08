@@ -12,9 +12,9 @@ TODO
 
     - Site hazırlarken izlemeniz gereken ilkeler için
 
-2. Depoyu klonlayın:
+2. Depoyu "fork"layın.
 
-            git clone git://github.com/00010011/ben.git
+   ![GitHub Fork](assets/github-fork.png)
 
 3. Deponun size ait bir Git deposu olması için
 
