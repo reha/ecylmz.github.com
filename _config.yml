@@ -15,7 +15,7 @@ pygments: true
 # ----------------------------------------------------------------------
 
 # github hesap adı (ör. roktas)
-account: 00010011
+account: "00010011"
 
 # github organizasyonu (ör. 19)
 organization: 19

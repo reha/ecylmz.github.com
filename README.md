@@ -266,3 +266,5 @@ Bu işlemleri elle yapmak istiyorsanız şu adımları izleyin.
   **dikkat!**  `_config.yml` dosyasında yaptığınız değişiklikler otomatik
   olarak etkinleşmeyecektir.  Bu dosyada değişiklik yapmışsanız yukarıdaki
   komutu tekrar çalıştırın.
+
+## Siteyi Geliştiricileri İçin Notlar
