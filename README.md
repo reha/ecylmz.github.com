@@ -287,7 +287,7 @@ Depodaki dosya/dizinler ve işlevleri şunlardır:
 
 - `_layouts`: Depoya ekleyeceğiniz girdilerden HTML çıktı üretmekte
   kullanılacak olan Jekyll şablonları.  Ayrıntılı bilgi için lütfen [Jekyll
-  NASIL](belgesini) okuyun.
+  NASIL](TODO) belgesini okuyun.
 
 - `_includes`: Şablonlarda kullanılan "işlev" parçaları.  Bu şablon depoda
   bulunan işlevler, özelleştirilmesi zor büyük dosyalar yerine, parçalı halde
