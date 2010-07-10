@@ -313,7 +313,7 @@ Depodaki dosya/dizinler ve işlevleri şunlardır:
 
 Aşağıdaki adımları izleyin:
 
-- GitHub'daki eski depoyu silin  Depo kopyasının makinenizde `<eski_depo>`
+- GitHub'daki eski depoyu silin.  Depo kopyasının makinenizde `<eski_depo>`
   adıyla zaten bulunduğunu varsayıyoruz.
 
 - Bu belgede anlatılan şekilde kurulum yapın.
