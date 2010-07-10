@@ -241,7 +241,8 @@ Bu örnekten anlaşılacağı gibi:
 ## Elle Nasıl Belge Eklerim?
 
 Yazmayı düşündüğünüz belgenin kategorisini `1` olarak seçtiğinizi varsayalım.
-Bu durumda bu belgeyi şu adımları izleyerek depoya ekleyebilirsiniz:
+Bu durumda bu belgeyi şu adımları izleyerek depoya ekleyebilirsiniz.
+Örneklerde site adresinin `http://00010011.biz/ben` olduğu varsayılmıştır.
 
 - `1/_posts` dizinine geçin.
 
@@ -268,7 +269,7 @@ Bu durumda bu belgeyi şu adımları izleyerek depoya ekleyebilirsiniz:
   belge numarası `100004` olacak ve belgenin HTML olarak derlenmiş haline
   aşağıdaki adresten erişebileceksiniz.
 
-            http://00010011.biz/100004
+            http://00010011.biz/ben/100004
 
 
 ## Depoda Ne Nedir?
