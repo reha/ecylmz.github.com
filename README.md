@@ -1,5 +1,11 @@
 # Kişisel Sayfalar İçin 19 Jekyll Şablonu
 
+Bu depoda 19 organizasyonu üyelerinin kişsel sitelerinde yararlanabileceği
+GitHub Jekyll şablonu bulunmaktadır.
+
+**Sitenin örnek görünümüne [http://00010011.biz/ben](http://00010011.biz/ben)
+adresinden ulaşabilirsiniz.**
+
 ## Kurulum
 
 1. Depoyu GitHub'da çoğaltın.  Resimde görülen "fork" butonuna tıklayın.
