@@ -82,7 +82,7 @@ Git "alias"ları tanımlanan "sözde git komutları"nı kullanabilirsiniz.
    kategorisini kullanabilirsiniz.
 
 2. Belge kategorisini (`1`) bu şekilde belirledikten sonra bu kategoriye girdi
-   girdi eklemek için aşağıdaki komutu kullanın:
+   eklemek için aşağıdaki komutu kullanın:
 
             git n 1
 
