@@ -172,11 +172,11 @@ sıralarsak:
 
 ## Site Şablonundaki Değişiklikleri Nasıl Alabilirim?
 
-Sitenizi bu belgenin "Başlangıç" kısmındaki adımları izleyerek oluşturmuş
-iseniz deponuzda `19` isimli bir başvuruya sahipsiniz demektir.  Bu
-başvurudaki `ben` isimli dalda site şablonundaki en temel (ve değiştirmemiş
-olmanızı beklediğimiz) dosyalar bulunmaktadır.  Aşağıdaki "`git-ben`" sözde
-Git komutuyla bu dosyalardaki değişiklikleri deponuza uygulayabilirsiniz.
+Sitenizi bu belgenin ilk bölümündeki adımları izleyerek oluşturmuş iseniz
+deponuzda `19` isimli bir başvuruya sahipsiniz demektir.  Bu başvurudaki `ben`
+isimli dalda site şablonundaki en temel (ve değiştirmemiş olmanızı
+beklediğimiz) dosyalar bulunmaktadır.  Aşağıdaki "`git-ben`" sözde Git
+komutuyla bu dosyalardaki değişiklikleri deponuza uygulayabilirsiniz.
 
             git ben
 
