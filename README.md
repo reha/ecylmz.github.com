@@ -6,9 +6,9 @@
 
    ![GitHub Fork](http://00010011.github.com/ben/assets/github-fork.png)
 
-2. GitHub'ın kişisel sayfaları tanımakta kullandığı "`<hesapadı>.github.com`"
-   biçimine getirmeniz gerekiyor.  Çoğalttığınız yeni deponun GitHub sayfasına
-   girin.
+2. Depo adını GitHub'ın kişisel sayfaları tanımakta kullandığı
+   "`<hesapadı>.github.com`" biçimine getirmeniz gerekiyor.  Çoğalttığınız
+   yeni deponun GitHub sayfasına girin.
    
 3. Resimde görülen "admin" butonuna tıklayarak depo ayarlarına girin.
 
