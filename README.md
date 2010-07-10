@@ -149,7 +149,7 @@ sıralarsak:
   Örneğin aşağıdaki komutlar `2` ve `7` dizinlerini siler:
 
             git rm -r 2 7
-            git commit -a -m "kullanımayan 2 ve 7 kategorilerini sil"
+            git commit -a -m "kullanılmayan 2 ve 7 kategorilerini sil"
             git push origin master
 
 - Sitede kullanılan CSS'yi "üzerine yazma" yoluyla değiştirmek için depodaki
