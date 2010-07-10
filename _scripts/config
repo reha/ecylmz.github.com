@@ -1,0 +1,21 @@
+#!/usr/bin/ruby
+
+# Jekyll yapılandırmasını etkileşimli şekilde oluştur.
+
+require 'erb'
+
+def erbify(infile, outfile=nil)
+  if infile =~ /.erb$/
+    if outfile == nil
+      outfile = infile.sub('.erb', '')
+    end
+    File.open(outfile, 'w') do |file|
+      file.write ERB.new(File.read(infile), nil, '-').result(binding)
+    end
+  end
+end
+
+if __FILE__ == $0
+  trap("INT") { puts; puts "Tamam çıkıyorum!"; exit }
+  erbify('_scripts/_config.yml.erb', '_config.yml')
+end

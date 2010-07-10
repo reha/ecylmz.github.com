@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# Yeni girdi oluştur, düzenle ve (değişiklik varsa) depoya ekle.
+#
+# Argüman opsiyoneldir ve kategori belirtir.
+#
+# Argüman verilmezse kategori olarak dizin değişme tarihi en yeni olan
+# kategori seçilir.
+#
+# Yeni girdiler için şablon olarak "post.sample" dosyası kullanılır.
+
+set -e
+
+. _scripts/util.sh
+
+sample () {
+	cat _scripts/post.sample
+}
+
+newpost=$(nextpost "$@")
+if [ -z "$newpost" ]; then
+	internalerror "yeni posta hesaplanamadı"
+fi
+if [ -f "$newpost" ]; then
+	internalerror "zaten varolan bir dosya yeni posta olarak hesaplandı"
+fi
+
+sample >"$newpost"
+md5sum=$(md5sum $newpost)
+trap '
+	exitcode=$?
+	if [ $exitcode -ne 0 ] || { [ -f "$newpost" ] && [ "$(md5sum $newpost)" = "$md5sum" ]; }; then
+		rm -f "'$newpost'"
+	fi
+	exit $exitcode
+' EXIT HUP INT QUIT TERM
+
+editor "$newpost"
+git add "$newpost"

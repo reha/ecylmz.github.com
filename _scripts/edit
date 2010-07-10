@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# En son üzerinde çalışılan girdiyi düzenle.
+#
+# Argüman opsiyoneldir ve kategori belirtir.
+#
+# Argüman verilmezse kategori olarak dizin değişme tarihi en yeni olan
+# kategori seçilir.
+
+set -e
+
+. _scripts/util.sh
+
+currentpost=$(currentpost "$@")
+if [ -z "$currentpost" ]; then
+	internalerror "güncel posta hesaplanamadı"
+fi
+if [ ! -f "$currentpost" ]; then
+	internalerror "güncel posta varolmayan bir posta olarak hesaplandı"
+fi
+
+editor "$currentpost"

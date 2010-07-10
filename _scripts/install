@@ -1,0 +1,49 @@
+#!/bin/sh
+
+# Depoyu yeni bir kişisel site için hazırla.
+
+set -e
+
+. _scripts/util.sh
+
+missing_debs=
+missing_gems=
+
+pathfind ruby   || missing_debs="${missing_debs} ruby"
+pathfind gem    || missing_debs="${missing_debs} rubygems"
+pkgfind libhighline-ruby || missing_debs="${missing_debs} libhighline-ruby"
+pathfind jekyll || missing_gems="${missing_gems} jekyll"
+
+if [ -n "$missing_debs" ]; then
+	messagehili "Eksik paketler: $missing_debs kuruluyor...  [sudo onayı gerekebilir]"
+	sudo apt-get install $missing_debs
+fi
+if [ -n "$missing_gems" ]; then
+	messagehili "Eksik gemler: $missing_gems kuruluyor...  [sudo onayı gerekebilir]"
+	sudo gem install $missing_gems
+fi
+
+messagehili "Betik kısayolları ayarlanıyor..."
+
+git config alias.test	'!_scripts/test'
+git config alias.t	'!_scripts/test'
+
+git config alias.edit	'!_scripts/edit'
+git config alias.e	'!_scripts/edit'
+
+git config alias.new	'!_scripts/new'
+git config alias.n	'!_scripts/new'
+
+git config alias.ben	'!_scripts/ben'
+
+if ! git remote | grep -q '^19$'; then
+	messagehili "Depo güncellemelerine abone olunuyor..."
+	git remote add 19 git://github.com/00010011/ben.git
+	git fetch 19
+fi
+
+messagehili "Öntanımlı Jekyll yapılandırması hazırlanıyor...  [soruları yanıtlayın]"
+_scripts/config
+
+messagehili "Kurulum tamamlandı."
+messagehili "Lütfen README.md dosyasında belirtilen son işlemleri yapın."

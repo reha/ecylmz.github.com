@@ -1,6 +1,7 @@
 # ======================================================================
 # 19 Jekyll yapılandırması
 # ======================================================================
+<% require 'highline/import' -%>
 
 # kalıcı adresler (lütfen bu ayara dokunmayın)
 permalink: /:categories:title
@@ -15,16 +16,16 @@ pygments: true
 # ----------------------------------------------------------------------
 
 # github hesap adı (ör. roktas)
-account: 00010011
+account: <%= STDOUT.flush; account = ask("GitHub Hesap Adı? ") { |q| q.default = ENV['USER'] }; account %>
 
 # github organizasyonu (ör. 19)
 organization: 19
 
 # bu siteyi üreten github deposu (ör. roktas.github.com)
-repository: ben
+repository: <%= STDOUT.flush; ask("Depo Adı? ") { |q| q.default = account + '.github.com' } %>
 
 # üretilen sitenin web adresi ne?  ör. "http://foo.github.com/bar".
-url: http://00010011.github.com
+url: <%= STDOUT.flush; ask("Bu Site için Web Adresi? ") { |q| q.default = 'http://' + account + '.github.com' } %>
 
 # sitede kullanılan css, görsel, javascript gibi kaynaklar
 # için kullanılacak "dijital varlıklar" adresi.
@@ -45,26 +46,26 @@ param:
         # --------------------------------------------------------------
         # kısa kullanıcı adı (ör. roktas)
         # dikkat!  sisteminizdeki ad github hesabından farklı olabilir
-        name: roktas
+        name: <%= ENV['USER'] %>
         # tam kullanıcı adı (ör. Recai Oktaş)
-        fullname: 19 Jekyll Şablonu
+        fullname: <%= STDOUT.flush; fullname = ask("Ad ve Soyad? "); fullname %>
         # email adresi (ör. roktas@bil.omu.edu.tr)
-        email: 19@bil.omu.edu.tr
+        email: <%= STDOUT.flush; ask("Eposta? ") { |q| q.default = account + '@bil.omu.edu.tr' } %>
         # sitede kullanılacak tepe web adresi (ör. http://roktas.me)
         # dikkat!  bu değişkeni "url" ile karıştırmayın!
         web: http://00010011.github.com
         # ünvan (ör. Bilgisayar Mühendisliği Öğrencisi)
         title: <a href="http://ondokuz.biz/">19</a> üyesi
         # GnuPG kısa parmak izi (ör. DEADBEEF)
-        gpg: DEADBEEF
+        gpg: <%= STDOUT.flush; ask("GnuPG Parmak İzi? ") { |q| q.default = '~' } %>
         # twitter adresi (ör. http://19.statusnet/roktas)
-        twitter: http://19.status.net
+        twitter: <%= STDOUT.flush; ask("Twitter? ") { |q| q.default = 'http://19.status.net/' + account } %>
         # flick adresi (ör. http://flickr.com/photos/roktas)
-        flickr: http://flickr.com/photos/19
+        flickr: <%= STDOUT.flush; ask("Flickr? ") { |q| q.default = 'http://flickr.com/photos/' + account } %>
         # facebook adresi (ör. http://facebook.com/roktas)
-        facebook: http://www.facebook.com/#!/group.php?gid=101297483252537
+        facebook: <%= STDOUT.flush; ask("Facebook? ") { |q| q.default = 'http://facebook.com/' + account } %>
         # özet akışı adresi (ör. http://feeds.feedburner.com/roktas)
-        feed: http://feeds.feedburner.com/19
+        feed: <%= STDOUT.flush; ask("Özet Akışı? ") { |q| q.default = 'http://feeds.feedburner.com/' + account } %>
 
         # --------------------------------------------------------------
         # ekstra özellik parametreleri
@@ -93,8 +94,8 @@ param:
         # 1'nci bölümü atla
         # nouse1: 1
         # 2'nci bölümü atla
-        nouse2: 1
+        # nouse2: 1
         # 7'nci bölümü atla
-        nouse7: 1
+        # nouse7: 1
         # 9'ncu bölümü atla
         # nouse9: 1

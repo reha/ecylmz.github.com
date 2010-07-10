@@ -1,19 +1,8 @@
 #!/bin/sh
 
-JEKYLL=
-for p in $(which jekyll) /var/lib/gems/1.8/bin/jekyll; do
-	if [ -x "$p" ]; then
-		JEKYLL="$p"
-		break
-	fi
-done
+# Jekyll sunucusunu localhost'ta çalıştır.
 
-if [ -z "$JEKYLL" ]; then
-	printf >&2 "Jekyll kurulu değil; kurmak için:\n\n"
-	printf >&2 "\tsudo apt-get install ruby1.8-dev\n"
-	printf >&2 "\tsudo gem install jekyll\n"
-	exit 1
-fi
+. _scripts/util.sh
 
 cat >&2 <<EOF
 Jekyll bu konsolda sunucu kipinde çalıştırılacak.  Siteyi görüntülemek
@@ -32,4 +21,5 @@ sonlandırıp tekrar çalıştırın.
 
 
 EOF
-exec $JEKYLL --rdiscount --url http://localhost:4000 --server --auto
+
+exec jekyll --rdiscount --url http://localhost:4000 --server --auto

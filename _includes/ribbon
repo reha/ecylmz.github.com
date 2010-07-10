@@ -1,5 +1,5 @@
 {% unless site.param.ribbon == null %}
 <div class="ribbon">
-  <a href="http://github.com/{{ site.param.account }}/{{ site.param.repository }}" rel="me" alt="{{ site.param.ribbon }}">{{ site.param.ribbon }}</a>
+  <a href="http://github.com/{{ site.account }}/{{ site.repository }}" rel="me" alt="{{ site.param.ribbon }}">{{ site.param.ribbon }}</a>
 </div>
 {% endunless %}

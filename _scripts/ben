@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+# Şablondaki güncellemeleri indir ve uygula.
+
+git fetch 19
+git checkout master
+git merge 19/ben

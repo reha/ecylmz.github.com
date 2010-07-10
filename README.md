@@ -4,7 +4,7 @@ TODO
 
 ## Başlangıç
 
-1.  Başlamadan önce lütfen aşağıdaki dokümanları okuyun:
+1. Başlamadan önce lütfen aşağıdaki dokümanları okuyun:
 
     - Bu depoda kullanılan konvansiyonlar için
 
@@ -12,55 +12,47 @@ TODO
 
     - Site hazırlarken izlemeniz gereken ilkeler için
 
-2.  Depoyu GitHub'da çoğaltın.  Resimde görülen "fork" butonuna tıklayın.
+2. Depoyu GitHub'da çoğaltın.  Resimde görülen "fork" butonuna tıklayın.
 
-    ![GitHub Fork](http://00010011.github.com/ben/assets/github-fork.png)
+   ![GitHub Fork](http://00010011.github.com/ben/assets/github-fork.png)
 
-3.  Çoğalttığınız depo adını değiştirmek için resimde görülen "admin" butonuna
-    tıklayarak depo ayarlarına girin.
+3. Çoğalttığınız depo adını değiştirmek için resimde görülen "admin" butonuna
+   tıklayarak depo ayarlarına girin.
 
-    ![GitHub Admin](http://00010011.github.com/ben/assets/github-admin.png)
+   ![GitHub Admin](http://00010011.github.com/ben/assets/github-admin.png)
 
-4.  Depo adını GitHub'ın kişisel sayfalar için istediği
-    `<hesapadı>.github.com` biçimine getirin.  Bu işlemi resimde görüldüğü
-    gibi yapabilirsiniz.  (Resimde görülen hesap adı `deney` olduğundan önceki
-    adı `ben` olan depo `deney.github.com` olarak değiştirilmektedir.)
+4. Depo adını GitHub'ın kişisel sayfalar için istediği `<hesapadı>.github.com`
+   biçimine getirin.  Bu işlemi resimde görüldüğü gibi yapabilirsiniz.
+   (Resimde görülen hesap adı `deney` olduğundan önceki adı `ben` olan depo
+   `deney.github.com` olarak değiştirilmektedir.)
 
-    ![GitHub Rename](http://00010011.github.com/ben/assets/github-rename.png)
+   ![GitHub Rename](http://00010011.github.com/ben/assets/github-rename.png)
 
-5.  İsmi değişmiş olan deponun kopyasını makinenize alın.
+5. İsmi değişmiş olan deponun kopyasını makinenize alın.
 
             git clone git@github.com:<hesapadı>/<hesapadı>.github.com
 
-6.  Elinizdeki kopyanın şablondaki değişiklikleri `19` başvurusuyla izlemesi
-    için ön ayar yapın.
+6. Bu aşamadan sonra depoyla birlikte gelen kurulum betiğini
+   kullanabilirsiniz.
+    
+            _scripts/install
 
-            git remote add 19 git://github.com/00010011/ben.git
-            git fetch 19
-
-7.  `_config.yml`'yi düzenleyin ("`«»`" karakterleriyle belirtilen alanları
-    düzenlemeyi unutmayın).  Bu düzenlemede en önemli değişken `url`'dir.
-    GitHub hesap adınız `<hesapadı>` ise bu değişken aşağıdaki gibi
-    ayarlanmalıdır.
-
-            url: http://<hesapadı>.github.com
-
-8.  Yaptığınız ön düzenlemeleri kaydedin ve GitHub'a gönderin.
+7. Yaptığınız ön düzenlemeleri kaydedin ve GitHub'a gönderin.
 
             git commit -a -m ilk
             git push origin master
 
-9.  Her şey yolunda gitmişse kişisel sitenize aşağıdaki adresten erişebiliyor
-    olmanız lazım.
+8. Her şey yolunda gitmişse kişisel sitenize aşağıdaki adresten erişebiliyor
+   olmanız lazım.
 
             http://<hesapadı>.github.com
 
-    GitHub'ın siteyi oluşturması (veya güncellemesi) biraz zaman almaktadır.
-    Değişiklikleri GitHub'a gönderdikten sonra kısa bir süre beklemeyi
-    unutmayın.
+   GitHub'ın siteyi oluşturması (veya güncellemesi) biraz zaman almaktadır.
+   Değişiklikleri GitHub'a gönderdikten sonra kısa bir süre beklemeyi
+   unutmayın.
 
-10. Yeni belge eklemek için "Nasıl Belge Eklerim?" bölümünü, sitenizi
-    özelleştirmek için "Nasıl Özelleştiririm?" bölümünü okuyun.
+9. Yeni belge eklemek için "Nasıl Belge Eklerim?" bölümünü, sitenizi
+   özelleştirmek için "Nasıl Özelleştiririm?" bölümünü okuyun.
 
 ## Belge Numaraları
 
@@ -233,12 +225,10 @@ değiştirebilirsiniz.  Bu değişiklikleri "hafiften ağıra" şekilde sıralar
 Sitenizi bu belgenin "Başlangıç" kısmındaki adımları izleyerek oluşturmuş
 iseniz deponuzda `19` isimli bir başvuruya sahipsiniz demektir.  Bu
 başvurudaki `ben` isimli dalda site şablonundaki en temel (ve değiştirmemiş
-olmanızı beklediğimiz) dosyalar bulunmaktadır.  Aşağıdaki komutlarla bu
+olmanızı beklediğimiz) dosyalar bulunmaktadır.  Aşağıdaki komutla bu
 dosyalardaki değişiklikleri deponuza uygulayabilirsiniz.
 
-            git fetch 19
-            git checkout master
-            git merge 19/ben
+            git ben
 
 **Dikkat!**  Bu depoda `19/ben` isimli dalda bulunan dosyalardan herhangi
 birini değiştirmiş iseniz yukarıdaki işlemler sonucunda, elle müdahele yoluyla
@@ -253,12 +243,11 @@ dosya oluşturabilirsiniz, bunun herhangi bir mahzuru yoktur.
 Siteyi test etmek için GitHub'a test gönderileri göndermenize gerek yok.
 Jekyll'ı kendi makinenize kurarak program tarafından sunulan ve
 `localhost:4000` adresinde servis yapan yerel sunucuyu kullanabilirsiniz.
-Depoda bulacağınız `j` isimli test betiği tüm bu işlemleri yapabilmektedir.
-Çalıştırmak için:
+Depoda bulacağınız `test` isimli betik tüm bu işlemleri yapabilmektedir.
 
-            ./j
+            git test
 
-Bu işlemleri elle yapmak istiyorsanız aşağıdaki adımları izleyin.
+Bu işlemleri elle yapmak istiyorsanız şu adımları izleyin.
 
 - Önce gerekli paketleri kurun:
 
