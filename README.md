@@ -1,6 +1,6 @@
 # Kişisel Sayfalar İçin 19 Jekyll Şablonu
 
-Bu depoda 19 organizasyonu üyelerinin kişsel sitelerinde yararlanabileceği
+Bu depoda 19 organizasyonu üyelerinin kişisel sitelerinde yararlanabileceği
 GitHub Jekyll şablonu bulunmaktadır.  Şablonla ilgili sorunları veya istekleri
 lütfen [proje hataları sayfasına](http://github.com/00010011/ben/issues) girdi
 ekleyerek bildirin.
