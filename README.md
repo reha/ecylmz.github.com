@@ -190,7 +190,7 @@ dosya oluşturabilirsiniz, bunun herhangi bir sakıncası yoktur.
 
 ## Siteyi Nasıl Test Edebilirim?
 
-Siteyi test etmek için GitHub'a test gönderileri göndermenize gerek yok.
+Siteyi test etmek için GitHub'a test gönderileri göndermenize gerek yoktur.
 Jekyll'ı kendi makinenize kurarak program tarafından sunulan ve
 `localhost:4000` adresinde servis yapan yerel sunucuyu kullanabilirsiniz.
 Depodaki "`git-test`" sözde komutu bu işlemleri yapabilmektedir.
@@ -227,7 +227,7 @@ Dosyanın `md` uzantısı bu girdinin
 ile yazıldığını göstermektedir.  Bu gönderiye `http://00010011.biz` sitesinde
 aşağıdaki kalıcı web adresinden erişilebilir:
 
-            http://00010011.biz/100203
+            http://00010011.biz/ben/100203
 
 Bu örnekten anlaşılacağı gibi:
 
