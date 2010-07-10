@@ -204,7 +204,7 @@ Depodaki "`git-test`" sözde komutu bu işlemleri yapabilmektedir.
 - Depoda değişiklik yaptığınızda üretilen site de (`_site` dizini) otomatik
   olarak güncellenecektir.
 
-  **dikkat!**  `_config.yml` dosyasında yaptığınız değişiklikler otomatik
+  **Dikkat!**  `_config.yml` dosyasında yaptığınız değişiklikler otomatik
   olarak etkinleşmeyecektir.  Bu dosyada değişiklik yapmışsanız yukarıdaki
   komutu tekrar çalıştırın.
 
