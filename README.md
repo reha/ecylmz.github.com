@@ -1,30 +1,22 @@
 # Kişisel Sayfalar İçin 19 Jekyll Şablonu
 
-TODO
+## Kurulum
 
-## Başlangıç
-
-1. Başlamadan önce lütfen aşağıdaki dokümanları okuyun:
-
-    - Bu depoda kullanılan konvansiyonlar için
-
-    - Jekyll'ı tanımak için
-
-    - Site hazırlarken izlemeniz gereken ilkeler için
-
-2. Depoyu GitHub'da çoğaltın.  Resimde görülen "fork" butonuna tıklayın.
+1. Depoyu GitHub'da çoğaltın.  Resimde görülen "fork" butonuna tıklayın.
 
    ![GitHub Fork](http://00010011.github.com/ben/assets/github-fork.png)
 
-3. Çoğalttığınız depo adını değiştirmek için resimde görülen "admin" butonuna
-   tıklayarak depo ayarlarına girin.
+2. GitHub'ın kişisel sayfaları tanımakta kullandığı "`<hesapadı>.github.com`"
+   biçimine getirmeniz gerekiyor.  Çoğalttığınız yeni deponun GitHub sayfasına
+   girin.
+   
+3. Resimde görülen "admin" butonuna tıklayarak depo ayarlarına girin.
 
    ![GitHub Admin](http://00010011.github.com/ben/assets/github-admin.png)
 
-4. Depo adını GitHub'ın kişisel sayfalar için istediği `<hesapadı>.github.com`
-   biçimine getirin.  Bu işlemi resimde görüldüğü gibi yapabilirsiniz.
-   (Resimde görülen hesap adı `deney` olduğundan önceki adı `ben` olan depo
-   `deney.github.com` olarak değiştirilmektedir.)
+4. Depo adını "`<hesapadı>.github.com`" olarak değiştirin.  Bu işlem resimde
+   örneklenmiştir.  (Resimde görülen hesap adı `deney` olduğundan önceki adı
+   `ben` olan depo `deney.github.com` olarak değiştirilmektedir.)
 
    ![GitHub Rename](http://00010011.github.com/ben/assets/github-rename.png)
 
@@ -32,29 +24,192 @@ TODO
 
             git clone git@github.com:<hesapadı>/<hesapadı>.github.com
 
-6. Bu aşamadan sonra depoyla birlikte gelen kurulum betiğini
-   kullanabilirsiniz.
+6. Depoyla birlikte gelen kurulum betiğini çalıştırın.
     
             _scripts/install
 
-7. Yaptığınız ön düzenlemeleri kaydedin ve GitHub'a gönderin.
+   (Kurulum sürecinde karşılaştığınız sorunları lütfen raporlayın.)
 
-            git commit -a -m ilk
-            git push origin master
-
-8. Her şey yolunda gitmişse kişisel sitenize aşağıdaki adresten erişebiliyor
-   olmanız lazım.
+Her şey yolunda gitmişse kişisel sitenize aşağıdaki adresten erişebiliyor
+olmanız lazım.
 
             http://<hesapadı>.github.com
 
-   GitHub'ın siteyi oluşturması (veya güncellemesi) biraz zaman almaktadır.
-   Değişiklikleri GitHub'a gönderdikten sonra kısa bir süre beklemeyi
-   unutmayın.
+Dikkat!  GitHub'ın siteyi güncellemesi biraz zaman almaktadır.  Değişiklikleri
+GitHub'a gönderdikten sonra kısa bir süre beklemeyi unutmayın.
 
-9. Yeni belge eklemek için "Nasıl Belge Eklerim?" bölümünü, sitenizi
-   özelleştirmek için "Nasıl Özelleştiririm?" bölümünü okuyun.
+Bu noktadan sonra deponuzu düzenlemeye, yeni belge eklemeye başlayabilirsiniz.
+Lütfen bu işlemler için dokümanın tamamını okumayı unutmayın.
 
-## Belge Numaraları
+
+## Nasıl Belge Eklerim?
+
+Sitede ["`0-1-2-7-9`" belgeleme sisteminin](TODO) Jekyll'a uyarlanmış bir
+modeli kullanılmaktadır.  Bu model kısaca ilgili bölümde anlatılmıştır.
+Sitede girdi ekleme, girdi düzenleme işlemlerini bu açıklamalara uygun şekilde
+elle yapmak yerine depoda `_scripts` dizininde bulunan ve kurulum sırasında
+Git "alias"ları tanımlanan "sözde git komutları"nı kullanabilirsiniz.
+
+1. İlk adım ekleyeceğiniz belgenin kategorisini belirlemektir.  Örnek bir
+   senaryo olarak GitHub'ın kullanımını yeni bir hesap açmaktan başlayarak
+   yeni bir depo oluşturmaya kadar baştan sona anlatan bir doküman yazmak
+   istediğinizi varsayalım.  Buna göre belgenin kategorisini belirlemek için
+   aşağıdaki sorgulamayı yapabilirsiniz.
+
+   **`0`** Belge, "öğreten" olmaktan çok kişisel görüş ve deneyimlerinizi
+   yansıtan (örneğin bir günlük girdisi gibi) kişisel bir belge mi?  Evet ise
+   `0` kategorisini kullanın.  Örnekte cevap **hayır** .  Eğer örnekteki belge
+   Ubuntu'nun son sürümü hakkındaki görüşlerinizi anlatan bir belge olsaydı bu
+   kategoriyi kullanabilirdiniz.
+
+   **`9`** Teknik nitelikteki bu belge, kısa bir bilgi notu mu?  Evet ise `9`
+   kategorisini kullanın.  Örnekte cevap **hayır**.  Eğer örnekteki belge
+   basitçe GitHub'ın tek bir özelliğini birkaç paragrafta anlatan kısa bir
+   bilgi notu olsaydı `9` kategorisini kullanabilirdiniz.
+
+   **`2`** Belge, teknik bir konuyu bilgi yönünden sunmaktan çok, izlenmesi
+   gereken ilke veya pratikler yönünden mi ele alıyor?  Örnekte cevap (büyük
+   ölçüde) **hayır**.  Eğer örnekteki belge GitHub üzerinden birlikte çalışma
+   sırasında uyulması gereken bir prosedürü anlatan bir belge olsaydı `2`
+   kategorisini kullanabilirdiniz.
+
+   **`1`** Belge, teknik bir konuyu "öğreten" üslubunda sunan (örneğin bir
+   "NASIL" veya "tutoryal" gibi) göreceli olarak uzun bir belge mi?  Bu tür
+   belgeler uzun olması, bir veya birkaç küçük bilgiden çok daha fazlasını
+   içermesi yönüyle `9` kategorisinden ayrılmaktadır.  Örnekte cevap **evet**.
+
+   **`7`** Yukarıdaki kategorilerin hiçbirine uymuyorsa (nadir bir durum) `7`
+   kategorisini kullanabilirsiniz.
+
+2. Belge kategorisini (`1`) bu şekilde belirledikten sonra bu kategoriye girdi
+   girdi eklemek için aşağıdaki komutu kullanın:
+
+            git n 1
+
+3. "`git-n`" komutu ilgili kategoride uygun sıra numarasını seçerek bir dosya
+   oluşturmakta ve bu dosyayı depoya eklemektedir (`git add`).  Son adım
+   olarak eklediğiniz belgeyi depoya kaydedip GitHub'a göndermelisiniz.
+   Aşağıdaki komutlar bu işlemi yapmaktadır.
+
+            git commit -m "yeni girdi"
+            git push origin master
+
+4. Eklediğiniz belgenin yayın adresine girerek üretilen HTML'yi kontrol edin.
+   Örneğin "`1/_posts/2010-07-08-00004.md`" isimli bir girdinin yayın adresi
+   "`http://<url>/100004`" olacaktır.  Burada  "`<url>`" yapılandırma
+   sırasında seçtiğiniz ve genellikle "`<hesapadı>.github.com`" biçiminde olan
+   site adresini göstermektedir.
+
+
+## Nasıl Belge Düzenlerim?
+
+İlgili belgeyi herhangi bir metin düzenleyicide açarak düzenlemeniz ve
+değişiklikleri GitHub'a göndermeniz yeterlidir.  Bu noktada "`git-e`" sözde
+Git komutu özellikle yeni girdi ekledikten sonra sıklıkla yaşanan "son eklenen
+girdiyi aç - düzenle - çık" çevrimini kolaylaştırmaktadır.  Depoya eklediğiniz
+son girdiyi düzenlemek için basitçe aşağıdaki komutu kullanın:
+
+            git e
+
+Bu komut kategori numarasını en son düzenleme yapılan kategori dizinine
+bakarak otomatik şekilde belirlemektedir.  Depoya yeni bir girdi ekledikten
+sonra, başka bir kategoride elle düzenleme yapmışsanız komut, son eklenen
+girdiyi değil, o kategorinin son girdisini açar.  Böyle bir durumda son
+eklenen girdiyi düzenlemek için kategori numarasını açık şekilde vermelisiniz.
+
+            git e <kategori>
+
+Belgeyi düzenledikten sonra değişiklikleri, uygun bir açıklamayla depoya
+kaydedip GitHub'a göndermeyi unutmayın.  Örneğin bir imla hatası
+düzeltmişseniz:
+
+            git commit -m imla
+            git push origin master
+
+
+## Site Görünümünü Nasıl Değiştirebilirim?
+
+"`0-1-2-7-9`" belgeleme modeline uymak kaydıyla site görünümünü istediğiniz
+şekilde değiştirebilirsiniz.  Bu değişiklikleri "hafiften ağıra" şekilde
+sıralarsak:
+
+- Sitede kullanılan logo'yu `param.logo` parametresiyle değiştirebilirsiniz.
+  Bu parametreyi `~` olarak ayarlarsanız logo görüntülenmez.
+
+- Bazı belge kategorilerini, örneğin `2` ve `7` kategorilerini hiç
+  kullanmıyorsanız bu kategorilerin kılavuzda görüntülenmemesi için aşağıdaki
+  ayarı kullanabilirsiniz (öntanımlı yapılandırma da böyledir):
+
+            param:
+                ...
+                nouse2: 1
+                nouse7: 1
+
+  Kullanılmayan kategorilere ait dizinleri de silmek isteyebilirsiniz.
+  Örneğin aşağıdaki komutlar `2` ve `7` dizinlerini siler:
+
+            git rm -r 2 7
+            git commit -a -m "kullanımayan 2 ve 7 kategorilerini sil"
+            git push origin master
+
+- Sitede kullanılan CSS'yi "üzerine yazma" yoluyla değiştirmek için depodaki
+  `assets/local.css` dosyasını düzenleyebilirsiniz.
+
+- Sitede kullanılan görsel ve temalar "CDN" işlevinde kullanılan bir dış
+  adresten alınmaktadır.  Bu adres `_config.yml` dosyasında `assets`
+  parametresiyle tanımlanmıştır.  Bu parametreyi değiştirerek sitenin baz CSS
+  dosyasını ve görsellerini tümüyle değiştirmeniz mümkündür.  Fakat belirli
+  işlevler çalışmayacağından bu yolu izlemek yerine `assets/local.css` ile
+  oynayarak aynı amaca ulaşmanızı öneririz.
+
+- Sitede Jekyll tarafından üretilen HTML çıktılarda yerleşim şablonu olarak
+  `_layouts` dizini altındaki dosyalar kullanılmaktadır.  Bu dizinde kendi
+  özel yerleşimlerinizi oluşturarak kullanabilirsiniz.  Fakat **dikkat**,
+  lütfen mevcut dosyaları, örneğin `_layouts/default.html`, düzenlemek yerine
+  bu dosyanın bir kopyasını farklı bir isimle oluşturarak değişikliklerinizi
+  bu dosyada yapın.  Bunun nedeni bir sonraki bölümde açıklanmıştır.
+
+
+## Site Şablonundaki Değişiklikleri Nasıl Alabilirim?
+
+Sitenizi bu belgenin "Başlangıç" kısmındaki adımları izleyerek oluşturmuş
+iseniz deponuzda `19` isimli bir başvuruya sahipsiniz demektir.  Bu
+başvurudaki `ben` isimli dalda site şablonundaki en temel (ve değiştirmemiş
+olmanızı beklediğimiz) dosyalar bulunmaktadır.  Aşağıdaki "`git-ben`" sözde
+Git komutuyla bu dosyalardaki değişiklikleri deponuza uygulayabilirsiniz.
+
+            git ben
+
+**Dikkat!**  Bu depoda `19/ben` isimli dalda bulunan dosyalardan herhangi
+birini değiştirmiş iseniz yukarıdaki işlemler sonucunda, elle müdahele yoluyla
+çözmeniz gereken bir "birleştirme uyuşmazlığı" ("merge conflict") ile
+karşılaşabilirsiniz.  Bu nedenle lütfen `19/ben`'de de bulunan dosyaları
+değiştirmeyin.  Bu dalda bulunan bir dizin altında (ör. `_layouts`) yeni bir
+dosya oluşturabilirsiniz, bunun herhangi bir sakıncası yoktur.
+
+
+## Siteyi Nasıl Test Edebilirim?
+
+Siteyi test etmek için GitHub'a test gönderileri göndermenize gerek yok.
+Jekyll'ı kendi makinenize kurarak program tarafından sunulan ve
+`localhost:4000` adresinde servis yapan yerel sunucuyu kullanabilirsiniz.
+Depodaki "`git-test`" sözde komutu bu işlemleri yapabilmektedir.
+
+- Test sunucusunu çalıştırın.
+
+            git test
+
+- Tarayıcınızda [localhost:4000](http://localhost:4000) yerel adresine girin.
+
+- Depoda değişiklik yaptığınızda üretilen site de (`_site` dizini) otomatik
+  olarak güncellenecektir.
+
+  **dikkat!**  `_config.yml` dosyasında yaptığınız değişiklikler otomatik
+  olarak etkinleşmeyecektir.  Bu dosyada değişiklik yapmışsanız yukarıdaki
+  komutu tekrar çalıştırın.
+
+
+## Yayın Numaraları
 
 Site gönderileri `0`, `1` gibi numaralı dizinler altındaki `_posts` dizininde
 `yıl-ay-gün-sıra.uzantı` biçiminde isimlendirilmiş dosyalarda bulunmaktadır.
@@ -77,17 +232,13 @@ aşağıdaki kalıcı web adresinden erişilebilir:
 Bu örnekten anlaşılacağı gibi:
 
 - Her gönderi **6 basamaklı** tekil bir sayıyla (`100203`) karakterize
-  edilmektedir.  Buna "belge numarası" diyoruz.
+  edilmektedir.  Buna "yayın numarası" diyoruz.
 
-- Belge numarasının ilk basamağı (`1`) gönderinin ait olduğu kategoriyi
+- Yayın numarasının ilk basamağı (`1`) gönderinin ait olduğu kategoriyi
   göstermektedir.
 
-## Nasıl Belge Eklerim?
 
-Depoya belge eklerken atılması gereken ilk adım belge kategorisini
-belirlemektir.  Bu konu "Hangi Belge Kategorisini Kullanmalıyım?" bölümünde
-kısaca özetlenmiştir.  Daha ayrıntılı bilgi almak için lütfen [TODO](TODO)
-belgesini okuyun.
+## Elle Nasıl Belge Eklerim?
 
 Yazmayı düşündüğünüz belgenin kategorisini `1` olarak seçtiğinizi varsayalım.
 Bu durumda bu belgeyi şu adımları izleyerek depoya ekleyebilirsiniz:
@@ -120,39 +271,6 @@ Bu durumda bu belgeyi şu adımları izleyerek depoya ekleyebilirsiniz:
             http://00010011.biz/100004
 
 
-## Hangi Belge Kategorisini Kullanmalıyım?
-
-Örnek bir senaryo olarak GitHub'ın kullanımını yeni bir hesap açmaktan
-başlayarak yeni bir depo oluşturmaya kadar baştan sona anlatan bir doküman
-yazmak istediğinizi varsayalım.  Buna göre belgenin kategorisini belirlemek
-için aşağıdaki sorgulamayı yapabilirsiniz.
-
-0. Belge, "öğreten" olmaktan çok kişisel görüş ve deneyimlerinizi yansıtan
-   (örneğin bir günlük girdisi gibi) kişisel bir belge mi?  Evet ise `0`
-   kategorisini kullanın.  Örnekte cevap **hayır** .  Eğer örnekteki belge
-   Ubuntu'nun son sürümü hakkındaki görüşlerinizi anlatan bir belge olsaydı bu
-   kategoriyi kullanabilirdiniz.
-
-9. Teknik nitelikteki bu belge, kısa bir bilgi notu mu?  Evet ise `9`
-   kategorisini kullanın.  Örnekte cevap **hayır**.  Eğer örnekteki belge
-   basitçe GitHub'ın tek bir özelliğini birkaç paragrafta anlatan kısa bir
-   bilgi notu olsaydı `9` kategorisini kullanabilirdiniz.
-
-2. Belge, teknik bir konuyu bilgi yönünden sunmaktan çok, izlenmesi gereken
-   ilke veya pratikler yönünden mi ele alıyor?  Örnekte cevap (büyük ölçüde)
-   **hayır**.  Eğer örnekteki belge GitHub üzerinden birlikte çalışma
-   sırasında uyulması gereken bir prosedürü anlatan bir belge olsaydı `2`
-   kategorisini kullanabilirdiniz.
-
-1. Belge, teknik bir konuyu "öğreten" üslubunda sunan (örneğin bir "NASIL"
-   veya "tutoryal" gibi) göreceli olarak uzun bir belge mi?  Bu tür belgeler
-   uzun olması, bir veya birkaç küçük bilgiden çok daha fazlasını içermesi
-   yönüyle `9` kategorisinden ayrılmaktadır.  Örnekte cevap **evet**.
-
-7. Yukarıdaki kategorilerin hiçbirine uymuyorsa (nadir bir durum) `7`
-   kategorisini kullanabilirsiniz.
-
-
 ## Depoda Ne Nedir?
 
 Depodaki dosya/dizinler ve işlevleri şunlardır:
@@ -175,6 +293,9 @@ Depodaki dosya/dizinler ve işlevleri şunlardır:
   bu dizindeki dosyalara dağıtılmıştır.  Yapacağınız özelleştirmelerde ilgili
   parçaları `include` ederek o özellikten yararlanabilirsiniz.
 
+- `_scripts`: Sitede kullanılan tüm yardımcı betikler (sözde git komutları,
+  kurulum betiği vb) bu dizindedir.
+
 - `assets`: Depo özelleştirmesinde, içeriklerde kullanacağınız "sayısal
   varlık"ların (ör. görseller, resimler, CSS dosyaları, JavaScript betikleri)
   tutulacağı dizin.
@@ -186,85 +307,55 @@ Depodaki dosya/dizinler ve işlevleri şunlardır:
   üretilen `404` hataları bu sayfaya yönlendirilecektir.  (Not: GitHub'ın
   `404` yönlendirme özelliği geçici olarak kaldırılmıştır.)
 
-## Site Görünümünü Nasıl Değiştirebilirim?
 
-19 belge sınıflamasına uymak kaydıyla site görünümünü istediğiniz şekilde
-değiştirebilirsiniz.  Bu değişiklikleri "hafiften ağıra" şekilde sıralarsak:
+## Mevcut GitHub Sitemi Bu Sisteme Nasıl Taşırım?
 
-- Sitede kullanılan logo'yu `param.logo` parametresiyle değiştirebilirsiniz.
-  Bu parametreyi `~` olarak ayarlarsanız logo görüntülenmez.
+Aşağıdaki adımları izleyin:
 
-- Bazı belge kategorilerini, örneğin `2` ve `7` kategorilerini hiç
-  kullanmıyorsanız bu kategorilerin kılavuzda görüntülenmemesi için aşağıdaki
-  ayarı kullanabilirsiniz:
+- GitHub'daki eski depoyu silin  Depo kopyasının makinenizde `<eski_depo>`
+  adıyla zaten bulunduğunu varsayıyoruz.
 
-            param:
-                ...
-                nouse2: 1
-                nouse7: 1
+- Bu belgede anlatılan şekilde kurulum yapın.
 
-- Sitede kullanılan CSS'yi "üzerine yazma" yoluyla değiştirmek için depodaki
-  `assets/local.css` dosyasını düzenleyebilirsiniz.
+- Mevcut belgelerinizi "`0-1-2-7-9`" modeline uyarlayın.  Hangi belge hangi
+  kategoride olmalı bunu belirleyin ve ilgili kategoride bir dizin açarak
+  taşıma yapın.  Örneğin:
 
-- Sitede kullanılan görsel ve temalar "CDN" işlevinde kullanılan bir dış
-  adresten alınmaktadır.  Bu adres `_config.yml` dosyasında `assets`
-  parametresiyle tanımlanmıştır.  Bu parametreyi değiştirerek sitenin baz CSS
-  dosyasını ve görsellerini tümüyle değiştirmeniz mümkündür.  Fakat belirli
-  işlevler çalışmayacağından bu yolu izlemek yerine `assets/local.css` ile
-  oynayarak aynı amaca ulaşmanızı öneririz.
+            ls <eski_depo>/_posts
+            <eski_depo>/2005-01-01-<0-kategorisinde-bir-girdi>.md
+            <eski_depo>/2005-01-01-<1-kategorisinde-bir-girdi>.md
 
-- Sitede Jekyll tarafından üretilen HTML çıktılarda yerleşim şablonu olarak
-  `_layouts` dizini altındaki dosyalar kullanılmaktadır.  Bu dizinde kendi
-  özel yerleşimlerinizi oluşturarak kullanabilirsiniz.  Fakat **dikkat**,
-  lütfen mevcut dosyaları, örneğin `_layouts/default.html`, düzenlemek yerine
-  bu dosyanın bir kopyasını farklı bir isimle oluşturarak değişikliklerinizi
-  bu dosyada yapın.  Bunun nedeni bir sonraki bölümde açıklanmıştır.
+            mkdir -p /tmp/0 /tmp/1
+            cp <eski_depo>/2005-01-01-<0-kategorisinde-bir-girdi>.md /tmp/0
+            cp <eski_depo>/2005-01-01-<1-kategorisinde-bir-girdi>.md /tmp/1
 
-## Site Şablonundaki Değişiklikleri Nasıl Alabilirim?
+- Depoda bulunan `_scripts/migrate` betiğini çalıştırarak girdileri bu sisteme
+  aktarın.
 
-Sitenizi bu belgenin "Başlangıç" kısmındaki adımları izleyerek oluşturmuş
-iseniz deponuzda `19` isimli bir başvuruya sahipsiniz demektir.  Bu
-başvurudaki `ben` isimli dalda site şablonundaki en temel (ve değiştirmemiş
-olmanızı beklediğimiz) dosyalar bulunmaktadır.  Aşağıdaki komutla bu
-dosyalardaki değişiklikleri deponuza uygulayabilirsiniz.
+            _scripts/migrate /tmp/0 0/_posts
+            _scripts/migrate /tmp/1 1/_posts
 
-            git ben
+- Aktarılan girdileri kontrol ettikten sonra yeni depoya gönderin.
 
-**Dikkat!**  Bu depoda `19/ben` isimli dalda bulunan dosyalardan herhangi
-birini değiştirmiş iseniz yukarıdaki işlemler sonucunda, elle müdahele yoluyla
-çözmeniz gereken bir "birleştirme uyuşmazlığı" ("merge conflict") ile
-karşılaşabilirsiniz.  Bu nedenle lütfen `19/ben`'de de bulunan dosyaları
-değiştirmeyin.  Bu dalda bulunan bir dizin altında (ör. `_layouts`) yeni bir
-dosya oluşturabilirsiniz, bunun herhangi bir mahzuru yoktur.
+            git add 0 1
+            git commit -a -m "eski site aktarıldı"
+            git push origin master
 
 
-## Siteyi Nasıl Test Edebilirim?
+## Kaynaklar
 
-Siteyi test etmek için GitHub'a test gönderileri göndermenize gerek yok.
-Jekyll'ı kendi makinenize kurarak program tarafından sunulan ve
-`localhost:4000` adresinde servis yapan yerel sunucuyu kullanabilirsiniz.
-Depoda bulacağınız `test` isimli betik tüm bu işlemleri yapabilmektedir.
+Sitenizde ileri düzeyde özelleştirmeler yapmak için aşağıdaki kaynaklara
+başvurabilirsiniz.
 
-            git test
+- [GitHub sayfaları hakkında GitHub dokümantasyonu](http://pages.github.com/)
 
-Bu işlemleri elle yapmak istiyorsanız şu adımları izleyin.
+- [Jekyll dokümantasyonu](http://wiki.github.com/mojombo/jekyll/)
 
-- Önce gerekli paketleri kurun:
+- [Liquid şablonlama sistemi](http://wiki.github.com/tobi/liquid/)
 
-            sudo apt-get install ruby1.8-dev
-            sudo gem install jekyll
 
-- Jekyll'ı aşağıdaki gibi çalıştırın:
+## Atıf
 
-            jekyll --rdiscount --url http://localhost:4000 --server --auto
-
-- Tarayıcınızda [localhost:4000](http://localhost:4000) yerel adresine girin.
-
-- Depoda değişiklik yaptığınızda üretilen site de (`_site` dizini) otomatik
-  olarak güncellenecektir.
-
-  **dikkat!**  `_config.yml` dosyasında yaptığınız değişiklikler otomatik
-  olarak etkinleşmeyecektir.  Bu dosyada değişiklik yapmışsanız yukarıdaki
-  komutu tekrar çalıştırın.
-
-## Siteyi Geliştiricileri İçin Notlar
+Şablon sitenin mevcut görünümünde Jekyll'ın yazarı [Tom
+Preston-Werner'in](http://github.com/mojombo) kişisel sitesindeki görünüm esas
+alınmıştır.

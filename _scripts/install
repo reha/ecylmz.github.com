@@ -6,6 +6,15 @@ set -e
 
 . _scripts/util.sh
 
+BEN_ADR="github.com:00010011/ben.git"
+
+remote_orig_url=$(git config remote.origin.url ||:)
+case "$remote_orig_url" in
+*$BEN_ADR)
+	die "Depoyu ayırmak (fork) yerine klonlamışsınız.  Lütfen README.md belgesini dikkatli okuyun!"
+	;;
+esac
+
 missing_debs=
 missing_gems=
 
@@ -38,12 +47,25 @@ git config alias.ben	'!_scripts/ben'
 
 if ! git remote | grep -q '^19$'; then
 	messagehili "Depo güncellemelerine abone olunuyor..."
-	git remote add 19 git://github.com/00010011/ben.git
+	git remote add 19 "git://$BEN_ADR"
 	git fetch 19
 fi
 
 messagehili "Öntanımlı Jekyll yapılandırması hazırlanıyor...  [soruları yanıtlayın]"
 _scripts/config
 
-messagehili "Kurulum tamamlandı."
-messagehili "Lütfen README.md dosyasında belirtilen son işlemleri yapın."
+URL=$(sed -ne 's/^url: *//p' _config.yml)
+if [ -n "$URL" ]; then
+	messagehili "Depo yapılandırması GitHub'a gönderiliyor..."
+	git commit _config.yml -m "19 Jekyll şablonunu uyarla"
+	git push origin master
+
+	cat >&2 <<-EOF
+Kurulum tamamlandı.  Lütfen GitHub'ın güncelleme yapması için kısa bir 
+süre bekledikten sonra sitenizi aşağıdaki adresten kontrol edin:
+
+	$URL
+	EOF
+else
+	internalerror  "site adresi belirlenemedi"
+fi
