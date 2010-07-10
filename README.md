@@ -254,7 +254,7 @@ Bu durumda bu belgeyi şu adımları izleyerek depoya ekleyebilirsiniz:
             2010-07-08-00003.md
 
 - Sıra numarasını bir artırarak ve günün tarihini kullanarak yeni belge ismini
-  oluşturun.  Örneğin "09 Temmuz 2010" tarihindeyse yukarıdaki örneğe göre
+  oluşturun.  Örneğin günün tarihi "09 Temmuz 2010" ise yukarıdaki örneğe göre
   yeni belge ismi `2010-07-10-00004.md` olacaktır.
 
 - Belgeyi yazın ve GitHub'a gönderin.
