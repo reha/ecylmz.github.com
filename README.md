@@ -22,11 +22,11 @@
 
 5. İsmi değişmiş olan deponun kopyasını makinenize alın.
 
-            git clone git@github.com:<hesapadı>/<hesapadı>.github.com
+            $ git clone git@github.com:<hesapadı>/<hesapadı>.github.com
 
 6. Depoyla birlikte gelen kurulum betiğini çalıştırın.
     
-            _scripts/install
+            $ _scripts/install
 
    (Kurulum sürecinde karşılaştığınız sorunları lütfen raporlayın.)
 
@@ -84,15 +84,15 @@ Git "alias"ları tanımlanan "sözde git komutları"nı kullanabilirsiniz.
 2. Belge kategorisini (`1`) bu şekilde belirledikten sonra bu kategoriye girdi
    eklemek için aşağıdaki komutu kullanın:
 
-            git n 1
+            $ git n 1
 
 3. "`git-n`" komutu ilgili kategoride uygun sıra numarasını seçerek bir dosya
    oluşturmakta ve bu dosyayı depoya eklemektedir (`git add`).  Son adım
    olarak eklediğiniz belgeyi depoya kaydedip GitHub'a göndermelisiniz.
    Aşağıdaki komutlar bu işlemi yapmaktadır.
 
-            git commit -m "yeni girdi"
-            git push origin master
+            $ git commit -m "yeni girdi"
+            $ git push origin master
 
 4. Eklediğiniz belgenin yayın adresine girerek üretilen HTML'yi kontrol edin.
    Örneğin "`1/_posts/2010-07-08-00004.md`" isimli bir girdinin yayın adresi
@@ -109,7 +109,7 @@ Git komutu özellikle yeni girdi ekledikten sonra sıklıkla yaşanan "son eklen
 girdiyi aç - düzenle - çık" çevrimini kolaylaştırmaktadır.  Depoya eklediğiniz
 son girdiyi düzenlemek için basitçe aşağıdaki komutu kullanın:
 
-            git e
+            $ git e
 
 Bu komut kategori numarasını en son düzenleme yapılan kategori dizinine
 bakarak otomatik şekilde belirlemektedir.  Depoya yeni bir girdi ekledikten
@@ -117,14 +117,14 @@ sonra, başka bir kategoride elle düzenleme yapmışsanız komut, son eklenen
 girdiyi değil, o kategorinin son girdisini açar.  Böyle bir durumda son
 eklenen girdiyi düzenlemek için kategori numarasını açık şekilde vermelisiniz.
 
-            git e <kategori>
+            $ git e <kategori>
 
 Belgeyi düzenledikten sonra değişiklikleri, uygun bir açıklamayla depoya
 kaydedip GitHub'a göndermeyi unutmayın.  Örneğin bir imla hatası
 düzeltmişseniz:
 
-            git commit -m imla
-            git push origin master
+            $ git commit -m imla
+            $ git push origin master
 
 
 ## Site Görünümünü Nasıl Değiştirebilirim?
@@ -148,9 +148,9 @@ sıralarsak:
   Kullanılmayan kategorilere ait dizinleri de silmek isteyebilirsiniz.
   Örneğin aşağıdaki komutlar `2` ve `7` dizinlerini siler:
 
-            git rm -r 2 7
-            git commit -a -m "kullanılmayan 2 ve 7 kategorilerini sil"
-            git push origin master
+            $ git rm -r 2 7
+            $ git commit -a -m "kullanılmayan 2 ve 7 kategorilerini sil"
+            $ git push origin master
 
 - Sitede kullanılan CSS'yi "üzerine yazma" yoluyla değiştirmek için depodaki
   `assets/local.css` dosyasını düzenleyebilirsiniz.
@@ -178,7 +178,7 @@ isimli dalda site şablonundaki en temel (ve değiştirmemiş olmanızı
 beklediğimiz) dosyalar bulunmaktadır.  Aşağıdaki "`git-ben`" sözde Git
 komutuyla bu dosyalardaki değişiklikleri deponuza uygulayabilirsiniz.
 
-            git ben
+            $ git ben
 
 **Dikkat!**  Bu depoda `19/ben` isimli dalda bulunan dosyalardan herhangi
 birini değiştirmiş iseniz yukarıdaki işlemler sonucunda, elle müdahele yoluyla
@@ -197,7 +197,7 @@ Depodaki "`git-test`" sözde komutu bu işlemleri yapabilmektedir.
 
 - Test sunucusunu çalıştırın.
 
-            git test
+            $ git test
 
 - Tarayıcınızda [localhost:4000](http://localhost:4000) yerel adresine girin.
 
@@ -260,10 +260,10 @@ Bu durumda bu belgeyi şu adımları izleyerek depoya ekleyebilirsiniz.
 
 - Belgeyi yazın ve GitHub'a gönderin.
 
-            $EDITOR 2010-07-10-00004.md # belgeyi düzenle
-            git add 2010-07-10-00004.md # depoya ekle
-            git commit -m "yeni belge"  # kaydet
-            git push origin master      # gönder
+            $ $EDITOR 2010-07-10-00004.md # belgeyi düzenle
+            $ git add 2010-07-10-00004.md # depoya ekle
+            $ git commit -m "yeni belge"  # kaydet
+            $ git push origin master      # gönder
 
 - Kategori `1`, sıra `00004` kullandıldığına göre bu belgenin (6 basamaklı)
   belge numarası `100004` olacak ve belgenin HTML olarak derlenmiş haline
@@ -322,25 +322,25 @@ Aşağıdaki adımları izleyin:
   kategoride olmalı bunu belirleyin ve ilgili kategoride bir dizin açarak
   taşıma yapın.  Örneğin:
 
-            ls <eski_depo>/_posts
+            $ ls <eski_depo>/_posts
             <eski_depo>/2005-01-01-<0-kategorisinde-bir-girdi>.md
             <eski_depo>/2005-01-01-<1-kategorisinde-bir-girdi>.md
 
-            mkdir -p /tmp/0 /tmp/1
-            cp <eski_depo>/2005-01-01-<0-kategorisinde-bir-girdi>.md /tmp/0
-            cp <eski_depo>/2005-01-01-<1-kategorisinde-bir-girdi>.md /tmp/1
+            $ mkdir -p /tmp/0 /tmp/1
+            $ cp <eski_depo>/2005-01-01-<0-kategorisinde-bir-girdi>.md /tmp/0
+            $ cp <eski_depo>/2005-01-01-<1-kategorisinde-bir-girdi>.md /tmp/1
 
 - Depoda bulunan `_scripts/migrate` betiğini çalıştırarak girdileri bu sisteme
   aktarın.
 
-            _scripts/migrate /tmp/0 0/_posts
-            _scripts/migrate /tmp/1 1/_posts
+            $ _scripts/migrate /tmp/0 0/_posts
+            $ _scripts/migrate /tmp/1 1/_posts
 
 - Aktarılan girdileri kontrol ettikten sonra yeni depoya gönderin.
 
-            git add 0 1
-            git commit -a -m "eski site aktarıldı"
-            git push origin master
+            $ git add 0 1
+            $ git commit -a -m "eski site aktarıldı"
+            $ git push origin master
 
 
 ## Kaynaklar
