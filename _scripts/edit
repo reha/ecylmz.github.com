@@ -20,3 +20,9 @@ if [ ! -f "$currentpost" ]; then
 fi
 
 editor "$currentpost"
+
+# Dosyanın stage'te olduğundan emin ol.  Bunu yapmazsak iki olumsuz seçenek var:
+# - commit için gönderi ismi gerekecek ör. "git commit <gönderi>"
+# - "git commit -a" ile gönderilecek (bk. hepsi bir arada komitleme sendromu)
+# Artık "stage"e alındığından sadece "git commit" yeterli.
+git add "$currentpost"
