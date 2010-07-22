@@ -24,7 +24,7 @@ organization: 19
 repository: ecylmz.github.com
 
 # üretilen sitenin web adresi ne?  ör. "http://foo.github.com/bar".
-url: http://ecylmz.github.com
+url: http://ecylmz.com
 
 # sitede kullanılan css, görsel, javascript gibi kaynaklar
 # için kullanılacak "dijital varlıklar" adresi.
