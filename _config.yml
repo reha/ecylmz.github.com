@@ -70,7 +70,7 @@ param:
         # ekstra özellik parametreleri
         #
         # bu değişkenler tanımlanmazsa (~ kullanın) öntanımlı sitede
-        # ilgili özellik bulunmayacaktır (örneğin: disqus)
+        # ilgili özellik bulunmayacaktır (örneğin: disqus) 
         #
         # dikkat!  değişkenin tanımlı olmaması için ~ değeri verin
         # --------------------------------------------------------------
