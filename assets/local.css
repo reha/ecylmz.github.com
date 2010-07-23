@@ -8,3 +8,8 @@ layout: nil
  * =============================================================================
  */
 
+
+body {
+background-image:url("http://templates.arcsin.se/demo/grunge-superstar-website-template/img/body.jpg");
+background-repeat: repeat ;
+}
