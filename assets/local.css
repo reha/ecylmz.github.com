@@ -7,3 +7,11 @@ layout: nil
  * Siteye özel Baz CSS
  * =============================================================================
  */
+
+html {
+background-image:url('body.jpg');
+}
+
+body {
+background-image:url('body.jpg')
+}
