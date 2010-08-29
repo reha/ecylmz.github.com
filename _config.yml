@@ -24,7 +24,7 @@ organization: 19
 repository: ecylmz.github.com
 
 # üretilen sitenin web adresi ne?  ör. "http://foo.github.com/bar".
-url: http://ecylmz.com
+url: http://ecylmz.github.com
 
 # sitede kullanılan css, görsel, javascript gibi kaynaklar
 # için kullanılacak "dijital varlıklar" adresi.
@@ -70,16 +70,16 @@ param:
         # ekstra özellik parametreleri
         #
         # bu değişkenler tanımlanmazsa (~ kullanın) öntanımlı sitede
-        # ilgili özellik bulunmayacaktır (örneğin: disqus) 
+        # ilgili özellik bulunmayacaktır (örneğin: disqus)
         #
         # dikkat!  değişkenin tanımlı olmaması için ~ değeri verin
         # --------------------------------------------------------------
         # logo (ör. http://00010011.github.com/assets/19/19-normal-128x128.png)
         logo: http://00010011.github.com/assets/19/19-normal-128x128.png
         # google analytics takip numarası (ör. UA-1234567-8
-        googleanalyticsid: UA-17317907-1
+        googleanalyticsid: ~
         # sayfa yorumları için disqus site kaydı (ör. roktas)
-        disqus: ecylmz
+        disqus: ~
         # GitHub şerit metni (ör. GitHub'dayım)
         ribbon: GitHub'dayım
 
